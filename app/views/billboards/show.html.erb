@@ -1,4 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_billboard_path(@billboard) %> |
-<%= link_to 'Back', billboards_path %>
+<h1>Billboard Info</h1>
+
+<table>
+  <tr>
+    <td>Title:</td>
+    <td><%= @billboard.title %></td>
+  </tr>
+  <tr>
+    <td>Country:</td>
+    <td><%= @billboard.country %></td>
+  </tr>
+  <tr>
+    <td><%= link_to 'Edit', edit_billboard_path(@billboard) %></td>
+    <td><%= link_to 'Back', billboards_path %></td>
+  </tr>
+</table>

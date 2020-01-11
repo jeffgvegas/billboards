@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+
 <h1>Top 10 Billboards of the Century </h1>
+
+
+<%= form_tag(billboards_path method: :get) do %>
+  Title <% text_field_tag :title, params[:title] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
 
 <table>
   <thead>
@@ -13,7 +20,7 @@
     <% @billboards.each do |billboard| %>
       <tr>
         <td><%= billboard.title %></td>
-        <td><%= link_to 'Show', billboard %></td>
+        <td><%= link_to 'Info', billboard %></td>
         <td><%= link_to 'Edit', edit_billboard_path(billboard) %></td>
         <td><%= link_to 'Destroy', billboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

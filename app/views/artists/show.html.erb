@@ -1,4 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Artist Info</h1>
+
+<table>
+  <tr>
+    <td>Artist Name:</td>
+    <td><%= @artist.name %></td>
+  </tr>
+</table>
+
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
