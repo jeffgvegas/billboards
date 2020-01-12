@@ -41,7 +41,7 @@ class SongsController < ApplicationController
   # PATCH/PUT /songs/1.json
   def update
     respond_to do |format|
-      if @song.update(song_params)
+      if @song = Song.find(params[:id])
         format.html { redirect_to @song, notice: 'Song was successfully updated.' }
         format.json { render :show, status: :ok, location: @song }
       else

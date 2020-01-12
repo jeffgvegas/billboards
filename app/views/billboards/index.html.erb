@@ -3,12 +3,6 @@
 
 <h1>Top 10 Billboards of the Century </h1>
 
-
-<%= form_tag(billboards_path method: :get) do %>
-  Title <% text_field_tag :title, params[:title] %>
-  <%= submit_tag 'Search', name: nil %>
-<% end %>
-
 <table>
   <thead>
     <tr>

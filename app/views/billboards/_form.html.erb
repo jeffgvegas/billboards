@@ -1,0 +1,5 @@
+<%= form_with(url: billboards_path, local: true) do |f| %>
+  <%= f.select(:billboard_id, options_from_collection_for_select(Billboard.all, "id", "title")) %>
+  <%= f.select(:song_id, options_from_collection_for_select(Song.all, "id", "title")) %>
+  <%= f.submit("Save") %>
+<% end %>
